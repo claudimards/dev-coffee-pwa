@@ -148,9 +148,46 @@
         .win-color {
         background-color: rgb(240, 240, 240);
         }
+
+        .re-load {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 1rem .5rem;
+            position: relative;
+            z-index: 5;
+        }
+        .re-load .text {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: .5rem;
+        }
+        .re-load #counter {
+            margin-bottom: .5rem;
+            font-size: 1rem;
+        }
+        .re-load #refresh {
+            padding: .5rem 1rem;
+            border-radius: 10px;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all .3s ease-in-out
+        }
+        .re-load #refresh:hover {
+            cursor: pointer;
+            opacity: .7;
+        }
     </style>
   </head>
-  <body onload="initialize()">
+  <body onload="initialize(), autoRefresh()">
+    <div class="re-load">
+        <p class="text">Parece que você está sem conexão com a internet</p>
+        <P id="counter"></P>
+        <p class="text">Aguarde uns instantes ou tente atualizar a página novamente!</p>
+        <button id="refresh">Atualizar</button>
+    </div>
     <h1>Tic-Tac-Toe</h1>
     <table id="table_game">
       <tr><td class="td_game"><div id="cell0" onclick="cellClicked(this.id)" class="fixed"></div></td><td class="td_game"><div id="cell1" onclick="cellClicked(this.id)" class="fixed"></div></td><td class="td_game"><div id="cell2" onclick="cellClicked(this.id)" class="fixed"></div></td></tr>
@@ -845,6 +882,41 @@
           }
           setTimeout(restartGame, 800);
       }
+
+    // botão para atuaizar a página
+    const btnRefresh = document.querySelector('#refresh')
+    btnRefresh.addEventListener('click', event => {
+    location.reload();
+    return false;
+    })
+
+    // atualiza a página automaticamente
+    function autoRefresh() {
+        function checklength(i) {
+            'use strict';
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+        var minutes, seconds, count, counter, timer;
+        count = 31; //seconds
+        counter = setInterval(timer, 1000);
+        function timer() {
+            'use strict';
+            count = count - 1;
+            minutes = checklength(Math.floor(count / 60));
+            seconds = checklength(count - minutes * 60);
+            if (count < 0) {
+                clearInterval(counter);
+                return;
+            }
+            document.getElementById("counter").innerHTML = 'Tentando nova conexão em ' + seconds + ' segundos';
+            if (count === 0) {
+                location.reload();
+            }
+        }
+    }
     </script>
   </body>
 </html>
