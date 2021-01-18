@@ -101,12 +101,33 @@
         position: fixed;
         z-index: 1;
         left: 0;
-        top: 0;
+        top: 80px;
         width: 100%;
         height: 100%;
         overflow: auto; /* enable scroll if needed */
         background-color: black; /* fallback color */
         background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        @media screen and (max-width: 768px) {
+            .modal {
+                top: 125px;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .modal {
+                top: 185px;
+            }
+        }
+        @media screen and (max-width: 425px) {
+            .modal {
+                top: 250px;
+            }
+        }
+        @media screen and (max-width: 320px) {
+            .modal {
+                top: 330px;
+            }
         }
 
         /* modal content */
@@ -126,6 +147,13 @@
         .modal-content p {
         margin: 0;
         padding: 0;
+        }
+
+        @media screen and (max-width: 425px) {
+            .modal-content {
+                margin: 0 auto;
+                font-size: 1.5em;
+            }
         }
 
         /* close button for modal dialog */
@@ -163,6 +191,14 @@
             font-weight: 600;
             margin: .5rem;
         }
+        @media screen and (max-width: 425px) {
+            .re-load .text {
+                font-size: 1rem;
+            }
+            h2 {
+                font-size: 1em;
+            }
+        }
         .re-load #counter {
             margin-bottom: .5rem;
             font-size: 1rem;
@@ -181,7 +217,7 @@
         }
     </style>
   </head>
-  <body onload="initialize(), autoRefresh()">
+  <body onload="initialize()">
     <div class="re-load">
         <p class="text">Parece que você está sem conexão com a internet</p>
         <P id="counter"></P>
