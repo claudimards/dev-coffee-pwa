@@ -109,27 +109,6 @@
         background-color: rgba(0, 0, 0, 0.6);
         }
 
-        @media screen and (max-width: 768px) {
-            .modal {
-                top: 125px;
-            }
-        }
-        @media screen and (max-width: 600px) {
-            .modal {
-                top: 185px;
-            }
-        }
-        @media screen and (max-width: 425px) {
-            .modal {
-                top: 250px;
-            }
-        }
-        @media screen and (max-width: 320px) {
-            .modal {
-                top: 330px;
-            }
-        }
-
         /* modal content */
         .modal-content {
         background-color: rgb(240, 240, 240);
@@ -137,23 +116,19 @@
         font-size: 2em;
         font-weight: bold;
         /* 16 % from the top and centered */
-        margin: 16% auto;
+       /*margin: 16% auto;*/
         padding: 20px;
         border: 2px solid black;
         border-radius: 10px;
         width: 380px;
         max-width: 80%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 50%);
         }
         .modal-content p {
         margin: 0;
         padding: 0;
-        }
-
-        @media screen and (max-width: 425px) {
-            .modal-content {
-                margin: 0 auto;
-                font-size: 1.5em;
-            }
         }
 
         /* close button for modal dialog */
@@ -191,14 +166,7 @@
             font-weight: 600;
             margin: .5rem;
         }
-        @media screen and (max-width: 425px) {
-            .re-load .text {
-                font-size: 1rem;
-            }
-            h2 {
-                font-size: 1em;
-            }
-        }
+
         .re-load #counter {
             margin-bottom: .5rem;
             font-size: 1rem;
@@ -214,6 +182,46 @@
         .re-load #refresh:hover {
             cursor: pointer;
             opacity: .7;
+        }
+
+        @media screen and (max-width: 768px) {
+            .modal {
+                top: 125px;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .modal {
+                top: 185px;
+            }
+            .re-load .text {
+                font-size: 1rem;
+            }
+            .modal-content {
+                transform: translate(-50%, 0%);
+            }
+            h2 {
+                font-size: 1em;
+            }
+            h3 {
+                font-size: .8em;
+            }
+        }
+        @media screen and (max-width: 425px) {
+            .modal {
+                top: 250px;
+            }
+            .modal-content {
+                margin: 0 auto;
+                font-size: 1.5em;
+            }
+            .re-load .text {
+                font-size: 1rem;
+            }
+        }
+        @media screen and (max-width: 320px) {
+            .modal {
+                top: 330px;
+            }
         }
     </style>
   </head>
