@@ -99,21 +99,45 @@
       "purpose": "maskable"
     }
   ],
-  "shotcuts": [
-    {
-      "name": "Home",
-      "url": "/index.html",
-      "description": "Ir para home"
-    },
+  "shortcuts": [
     {
       "name": "About",
       "url": "/about.html",
-      "description": "Ir para Sobre"
+      "description": "Ir para Sobre",
+      "icons": [
+        {
+          "src": "/images/shortcuts-icons/about.png",
+          "sizes": "96x96",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
     },
     {
       "name": "Blog",
       "url": "/blog.html",
-      "description": "Ir para Blog"
+      "description": "Ir para Blog",
+      "icons": [
+        {
+          "src": "/images/shortcuts-icons/blogger.png",
+          "sizes": "96x96",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
+    },
+    {
+      "name": "Home",
+      "url": "/index.html",
+      "description": "Ir para home",
+      "icons": [
+        {
+          "src": "/images/shortcuts-icons/home.png",
+          "sizes": "96x96",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
     }
   ],
   "screenshots": [ 

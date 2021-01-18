@@ -73,3 +73,56 @@ h1 {
   padding: 0.3rem 1rem;
   border-radius: 20px;
 }
+
+.div-install {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 55px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background: #4b5fc5;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  width: 100%;
+}
+.div-install #close-install {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #FFF;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  transition: all .3s ease-in-out;
+}
+.div-install img {
+  margin-right: 1rem;
+  border-radius: 10px;
+}
+.div-install .controls p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-bottom: .5rem;
+}
+.div-install .controls #btn-install {
+  padding: .5rem 1rem;
+  border-radius: 10px;
+  border: none;
+  background: #db4938;
+  color: #FFF;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all .3s ease-in-out;
+}
+.div-install .controls #btn-install:hover,
+.div-install #close-install:hover  {
+  cursor: pointer;
+  opacity: .7;
+}
+
+.hidden {
+  display: none;
+}
