@@ -1,10 +1,9 @@
-[
-  {
-    "relation": ["delegate_permission/common.handle_all_urls"],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "xyz.appmaker.msxepi",
-      "sha256_cert_fingerprints": ["25:AF:40:02:AF:C2:DC:C8:CF:C8:AF:D9:5A:47:44:6D:95:FA:C7:C0:CF:13:AA:00:BA:43:3E:97:81:E4:82:6A"]
-    }
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "br.com.devcoffee.twa",
+    "sha256_cert_fingerprints":
+    ["95:00:28:B9:04:34:B9:D9:30:F6:7E:D4:87:AD:69:AF:26:E1:FD:D8:F5:F7:8B:91:B2:2B:98:72:F3:A3:EB:8C"]
   }
-]
+}]
